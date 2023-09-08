@@ -1,0 +1,16 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "Ostrich Sans";
+  src:
+    local("☺"),
+    url("/fonts/ostrich-sans-bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+}
+
+.main-title {
+  font-family: "Ostrich Sans";
+}
