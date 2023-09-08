@@ -1,3 +1,5 @@
+// Generated types for WeatherApi.com
+
 export interface Weather {
   last_updated_epoch: number;
   last_updated: string;

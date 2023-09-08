@@ -1,3 +1,5 @@
+// Generated types for WeatherApi.com
+
 export interface Location {
   name: string;
   region: string;

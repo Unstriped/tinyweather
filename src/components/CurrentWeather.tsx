@@ -5,6 +5,7 @@ interface WeatherProps {
   weather: Weather;
 }
 
+// Shows weather information and an matching image
 const CurrentWeather: React.FC<WeatherProps> = ({ weather }) => {
   return (
     <>

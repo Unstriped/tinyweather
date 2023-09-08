@@ -25,14 +25,19 @@ ChartJS.register(
 export const options = {
   responsive: true,
   maitainAspectRatio: false,
-  cubicInterpolationMode: "monotone",
+  cubicInterpolationMode: "monotone", // how the line 'curves'. https://www.chartjs.org/docs/latest/samples/line/interpolation.html
 };
 
 interface ChartData {
   chartData: ForecastdayEntity[];
 }
 
+/* 
+  Linechart component powered by chartjs that shows forecast data for the upcoming week
+  Docs available at https://www.chartjs.org/ and https://react-chartjs-2.js.org/
+*/
 const LineChart: React.FC<ChartData> = ({ chartData }) => {
+  // Format forcast data to fit the chartjs format
   const data = {
     labels: chartData.map((point) => point.date),
     datasets: [

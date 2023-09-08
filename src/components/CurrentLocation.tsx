@@ -3,6 +3,7 @@ import SaveLocation from "../components/SaveLocation";
 import { Location } from "../types/location-types";
 import { LocationContext } from "../context-provider";
 
+// Used to display location info from last search
 const CurrentLocation: React.FC = () => {
   const currentLocation = useContext<Location | undefined>(LocationContext);
   if (!currentLocation) return;

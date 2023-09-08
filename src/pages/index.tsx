@@ -22,7 +22,7 @@ const IndexPage: React.FC<PageProps> = () => {
   const [forecastResult, setForecastResult] = useState<Forecast | null>(null);
 
   /* 
-  Fetch weather data from WeatherApi.com
+    Fetch weather data from WeatherApi.com
     Key is supplied through .env-file
     Call fetches Current weather as well as a 7 day forecast  and location data
   */
@@ -69,6 +69,7 @@ const IndexPage: React.FC<PageProps> = () => {
             error={locationError}
           />
           {locationResult && (
+            // Provide locaation info to all child components with useContext()
             <LocationContext.Provider value={locationResult}>
               <div className="pl-4 mt-4">
                 <div>

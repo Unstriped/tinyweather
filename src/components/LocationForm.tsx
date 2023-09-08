@@ -7,6 +7,7 @@ interface LocationInputProps {
   error: string | null;
 }
 
+// Input location and pass it to parent component thorugh onInput-function
 const LocationInput: React.FC<LocationInputProps> = ({
   onInput,
   disabled,
@@ -15,6 +16,8 @@ const LocationInput: React.FC<LocationInputProps> = ({
   const [inputText, setInputText] = useState("");
   const [favourites, setContent] = useState<string[]>([]);
 
+  // Listen to storage events
+  // Triggered everytime a user clicks the 'favourite-button' which updates the localStorage
   useEffect(() => {
     const handleStorageEvent = () => {
       let storedLocations = localStorage.storedLocations;
@@ -34,7 +37,6 @@ const LocationInput: React.FC<LocationInputProps> = ({
 
   return (
     <>
-      {" "}
       <form
         className="form-control"
         onSubmit={(event: React.FormEvent) => {
@@ -69,6 +71,7 @@ const LocationInput: React.FC<LocationInputProps> = ({
         {error && <p className="mx-4 mt-2 text-xs text-red-500"> {error}</p>}
       </form>
       {!!favourites.length && (
+        // List all favourites if the user has any
         <ul className="flex gap-4 flex-wrap">
           {favourites.map((fav) => (
             <li key={fav}>
