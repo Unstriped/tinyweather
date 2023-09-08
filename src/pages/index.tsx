@@ -72,10 +72,8 @@ const IndexPage: React.FC<PageProps> = () => {
             // Provide locaation info to all child components with useContext()
             <LocationContext.Provider value={locationResult}>
               <div className="pl-4 mt-4">
-                <div>
-                  <CurrentLocation />
-                  {weatherResult && <CurrentWeather weather={weatherResult} />}
-                </div>
+                <CurrentLocation />
+                {weatherResult && <CurrentWeather weather={weatherResult} />}
               </div>
             </LocationContext.Provider>
           )}
