@@ -24,3 +24,5 @@
     Your site is now running at http://localhost:8000!
 
     Edit `src/pages/index.tsx` to see your site update in real-time!
+
+### Checkout the branch 'unit-tests' to see available tests (wip)
