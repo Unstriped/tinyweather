@@ -54,8 +54,8 @@ const IndexPage: React.FC<PageProps> = () => {
   }
 
   return (
-    <main className="w-screen h-screen bg-base-100 relative flex flex-col px-4 items-center">
-      <h1 className="main-title text-5xl md:text-7xl lg:text-9xl m-4 lg:mb-8 transition-all ease-in-out z-10">
+    <main className="w-screen min-h-screen bg-base-100 relative flex flex-col p-4 items-center">
+      <h1 className="main-title text-5xl md:text-7xl lg:text-9xl lg:mb-8 transition-all ease-in-out z-10">
         Tiny Weather
       </h1>
       {weatherResult && (
