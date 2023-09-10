@@ -68,7 +68,11 @@ const LocationInput: React.FC<LocationInputProps> = ({
           </button>
         </div>
 
-        {error && <p className="mx-4 mt-2 text-xs text-red-500"> {error}</p>}
+        {error && (
+          <p data-testid="error-msg" className="mx-4 mt-2 text-xs text-red-500">
+            {error}
+          </p>
+        )}
       </form>
       {!!favourites.length && (
         // List all favourites if the user has any
@@ -76,6 +80,7 @@ const LocationInput: React.FC<LocationInputProps> = ({
           {favourites.map((fav) => (
             <li key={fav}>
               <button
+                type="button"
                 className="btn btn-accent btn-sm whitespace-nowrap"
                 onClick={() => onInput(fav)}
               >
